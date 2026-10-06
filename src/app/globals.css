@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f0e6;
+  --foreground: #3a2420;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: #f7f0e6;
+  --color-cream: #fffaf3;
+  --color-ink: #3a2420;
+  --color-berry: #e2485d;
+  --color-berry-dark: #c43349;
+  --color-blush: #f6cfd3;
+  --color-butter: #f2d98b;
+  --color-pistachio: #c9d9a8;
+  --font-sans: var(--font-huninn), "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.font-display {
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+
+/* 奶油擠花般的扇形邊 */
+.scallop-top {
+  height: 14px;
+  background: radial-gradient(circle at 14px 14px, var(--scallop, var(--color-berry)) 13.5px, transparent 14px) repeat-x;
+  background-size: 28px 28px;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+@keyframes wobble {
+  0%, 100% { transform: rotate(0) scale(1); }
+  20% { transform: rotate(-10deg) scale(1.05, 0.95); }
+  40% { transform: rotate(9deg) scale(0.95, 1.05); }
+  60% { transform: rotate(-7deg) scale(1.04, 0.96); }
+  80% { transform: rotate(5deg) scale(0.97, 1.03); }
+}
+
+.animate-bob { animation: bob 4s ease-in-out infinite; }
+.animate-spin-slow { animation: spin 18s linear infinite; }
+.animate-marquee { animation: marquee 32s linear infinite; }
+.animate-wobble { animation: wobble 0.5s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bob, .animate-spin-slow, .animate-marquee, .animate-wobble { animation: none; }
+}
