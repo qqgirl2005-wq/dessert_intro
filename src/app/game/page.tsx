@@ -5,7 +5,7 @@ import CakeCatcher from "./CakeCatcher";
 
 export const metadata: Metadata = {
   title: "接蛋糕小遊戲｜糖糖甜點屋 Sweetie Bakery",
-  description: "15 秒內接住從天上掉下來的甜點，看看你能拿幾分！",
+  description: "15 秒內接住從天而降的甜點，看看你能拿幾分！",
 };
 
 export default function GamePage() {
