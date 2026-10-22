@@ -24,7 +24,7 @@ const menu = [
     photo: "/images/desserts/macaron.jpg",
     name: "法式馬卡龍",
     en: "French Macarons",
-    desc: "檸檬、覆盆子、開心果三種口味，外殼薄脆。",
+    desc: "檸檬、覆盆子、開心果、草莓四種口味，外殼薄脆。",
     price: 50,
     credit: { author: "Tatiana Lapina", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Colorful_Macarons_(Unsplash).jpg" },
   },
